@@ -1,0 +1,30 @@
+{
+  "name": "amazona",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "start": "nodemon --watch backend --exec babel-node backend/server.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/LoukrichiFouad97/amazona.git"
+  },
+  "keywords": [],
+  "author": "Loukrichi fouad",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/LoukrichiFouad97/amazona/issues"
+  },
+  "homepage": "https://github.com/LoukrichiFouad97/amazona#readme",
+  "devDependencies": {
+    "@babel/cli": "^7.11.5",
+    "@babel/core": "^7.11.5",
+    "@babel/node": "^7.10.5",
+    "@babel/preset-env": "^7.11.5",
+    "nodemon": "^2.0.4"
+  },
+  "dependencies": {
+    "express": "^4.17.1"
+  }
+}
