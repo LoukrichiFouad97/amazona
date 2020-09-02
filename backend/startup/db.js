@@ -1,6 +1,6 @@
-import mongoose from "mongoose";
+const mongoose = require("mongoose");
 
-export const dbConnect = (dbName) => {
+module.exports = (dbName) => {
 	const DB_URL = `mongodb://localhost/${dbName}`;
 	try {
 		mongoose.connect(DB_URL, {
