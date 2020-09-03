@@ -1,4 +1,16 @@
-GET  http://localhost:5000/api/products
+# GET  http://localhost:5000/api/products
 
 
 POST http://localhost:5000/api/products
+Content-Type: application/json
+
+{
+  "_id": "5",
+  "name": "Classic Shirt",
+  "category": "Pants",
+	"image": "/images/d3.jpg",
+	"price": "50",
+	"brand": "Adidas",
+	"rating": "4.5",
+	"numReviews": "50"
+}
