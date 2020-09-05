@@ -6,7 +6,7 @@ const { productValidator } = require("../validators/auth");
 const { runValidation } = require("../validators");
 
 router.get("/", async (req, res) => {
-	const product = await Product.find().sort("_id");
+	const product = await Product.find();
 	res.send(product);
 });
 
@@ -40,7 +40,15 @@ router.delete("/:id", async (req, res) => {
 	const product = await Product.findByIdAndDelete(req.body._id);
 	if (!product) return res.status(404).send("Product not found");
 
-	res.send(product)
+	res.send(product);
+});
+
+router.get("/:id", async (req, res) => {
+	const productId = req.params.id;
+	const product = await Product.findById(productId);
+	if (!product) return res.status(404).send({ msg: "product not found" });
+
+	res.send(product);
 });
 
 module.exports = router;

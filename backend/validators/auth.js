@@ -19,12 +19,3 @@ exports.productValidator = [
 	check("numReviews").not().isEmpty().withMessage("Review is required"),
 ];
 
-/**
- * 	name: "Best Pants",
-		category: "Pants",
-		image: "/images/p2.jpg",
-		price: 70,
-		brand: " Nike",
-		rating: 4.5,
-		numReviews: 8,
- */
