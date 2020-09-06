@@ -20,6 +20,7 @@ router.post("/", productValidator, runValidation, async (req, res) => {
 		brand,
 		rating,
 		numReviews,
+		numInStock,
 	} = req.body;
 	const product = new Product({
 		_id,
@@ -30,6 +31,7 @@ router.post("/", productValidator, runValidation, async (req, res) => {
 		brand,
 		rating,
 		numReviews,
+		numInStock,
 	});
 
 	const result = await product.save();

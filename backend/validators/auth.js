@@ -1,7 +1,11 @@
 const { check } = require("express-validator");
 
 exports.productValidator = [
-	check("_id").isInt({min: 0, max: 99}).not().isEmpty().withMessage("ID is required"),
+	check("_id")
+		.isInt({ min: 0, max: 99 })
+		.not()
+		.isEmpty()
+		.withMessage("ID is required"),
 	check("name").isString().not().isEmpty().withMessage("name is required"),
 	check("category")
 		.isString()
@@ -17,5 +21,5 @@ exports.productValidator = [
 		.isEmpty()
 		.withMessage("Rating must be 1-5"),
 	check("numReviews").not().isEmpty().withMessage("Review is required"),
+	check("numInStock").isInt(),
 ];
-
