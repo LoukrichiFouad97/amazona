@@ -40,7 +40,7 @@ router.post("/", productValidator, runValidation, async (req, res) => {
 
 router.delete("/:id", async (req, res) => {
 	const product = await Product.findByIdAndDelete(req.body._id);
-	if (!product) return res.status(404).send("Product not found");
+	if (!product) return res.status(404).send("Product doesn't exist");
 
 	res.send(product);
 });
