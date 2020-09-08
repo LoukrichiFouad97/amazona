@@ -4,12 +4,11 @@ const morgan = require("morgan");
 const debug = require("debug")("app:startup");
 require("./startup/db")();
 require("./startup/routes")(app);
-const dotenv = require("dotenv");
-dotenv.config();
+require("dotenv").config();
 
-console.log(process.env.NODE_ENV);
+console.log(process.env.PORT);
 
-if (process.env.NODE_ENV === "development") {
+if (process.env.ENV === "dev") {
 	console.log("asdad");
 	app.use(morgan("tiny"));
 	debug("morgan started in dev env");
